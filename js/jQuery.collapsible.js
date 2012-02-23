@@ -6,7 +6,7 @@
  * licensed under MIT (filamentgroup.com/examples/mit-license.txt)
  * --------------------------------------------------------------------
  */
-$.fn.collapsible = function(){
+$.fn.collapsible = function(startExpanded){
 	return $(this).each(function(){
 	
 		//define
@@ -50,6 +50,6 @@ $.fn.collapsible = function(){
 				}
 				return false;
 			})
-			.trigger('collapse');
+			.trigger(startExpanded ? 'expand' : 'collapse');
 	});	
 };	
